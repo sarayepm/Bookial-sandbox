@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../static/css/aesthetic.css">
+	<link rel="stylesheet" href="../static/css/structure.css">
+	<link rel="stylesheet" href="../static/css/home.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+	<title>Bookial - Biblioteca</title>
+</head>
+<body>
+	<header>
+		<div style="display: flex; align-items: center; gap: 15px;">
+			<i class="bi bi-book-half" style="font-size: 48px;"></i>
+			<h1>Bookial</h1>
+			<small>Biblioteca Digital</small>
+		</div>
+	</header>
+
+	<nav>
+		<h3><i class="bi bi-menu-button-wide"></i> Menú</h3>
+		<a href="index.html"><i class="bi bi-house"></i> Inicio</a>
+		<a href="dashboard.html"><i class="bi bi-grid"></i> Dashboard</a>
+		<a href="library.html"><i class="bi bi-book"></i> Biblioteca</a>
+		<a href="calendar.html"><i class="bi bi-calendar"></i> Calendario</a>
+		<hr>
+		<a href="login.html"><i class="bi bi-box-arrow-right"></i> Cerrar Sesión</a>
+	</nav>
+
+	<main>
+		<h1><i class="bi bi-book"></i> Biblioteca Digital</h1>
+
+		<div class="search-filters">
+			<form method="GET" action="#" class="search-form">
+				<input type="text" name="search" placeholder="Buscar libros..." value="">
+				<button type="submit"><i class="bi bi-search"></i> Buscar</button>
+			</form>
+			
+			<div class="categories">
+				<a href="#" class="category-tag">Todos</a>
+				<a href="#" class="category-tag">Literatura</a>
+				<a href="#" class="category-tag">Ciencia Ficción</a>
+				<a href="#" class="category-tag">Historia</a>
+			</div>
+		</div>
+
+		<div class="books-grid">
+			<div class="book-card">
+				<div class="book-cover"><i class="bi bi-book-half"></i></div>
+				<h3>Don Quijote de la Mancha</h3>
+				<p>Miguel de Cervantes</p>
+				<p class="book-category"><i class="bi bi-tag"></i> Literatura</p>
+				<p><strong>Disponibles:</strong> 3/5</p>
+				<a href="book_details.html" class="btn-small">Ver detalles</a>
+			</div>
+			<div class="book-card">
+				<div class="book-cover"><i class="bi bi-book-half"></i></div>
+				<h3>Fahrenheit 451</h3>
+				<p>Ray Bradbury</p>
+				<p class="book-category"><i class="bi bi-tag"></i> Ciencia Ficción</p>
+				<p><strong>Disponibles:</strong> 0/2</p>
+				<a href="book_details.html" class="btn-small">Ver detalles</a>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<p>&copy; 2026 Bookial - Todos los derechos reservados</p>
+		<small>Contacto: bookial@protonmail.com</small>
+	</footer>
+	<script src="js/nav.js"></script>
+</body>
+</html>
