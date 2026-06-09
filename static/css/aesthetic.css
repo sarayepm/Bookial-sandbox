@@ -38,6 +38,14 @@ body {
 	min-height: 100vh;
 }
 
+label {
+	grid-area: lab;
+}
+
+input, select {
+	grid-area: inp;
+}
+
 .auth-container {
 	width: max-content;
 	margin: auto;
@@ -45,6 +53,13 @@ body {
 	padding: 2.5%;
 	filter: drop-shadow(0 2px 5px #0000001a);
 	border-radius: 10px;
+}
+
+
+.form-group {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 'lab inp';
 }
 
 form {
@@ -62,21 +77,28 @@ form div {
 	color: var(--mainpink);
 }
 
-.auth-container .auth-box p, form div label, input, select {
+.auth-container .auth-box p, form div label, input{
 	font-size: 1.7vh;
-	color: var(--lightpink);
+	color: var(--bookialblue);
 }
 
-.auth-link a:link {
-	color: var(--mainpink);
+input::placeholder, select {
+	font-size: 1.7vh;
+	color: var(--bookialpink);
+}
+
+
+.auth-link a {
+	color: var(--bookialpink);
+	transition: all .2s;
 }
 
 .auth-link a:hover {
-	color: var(--lightpink);
+	color: var(--bookialblue);
 }
 
 .auth-link a:active {
-	color: var(--strongorange);
+	color: var(--bookialmagenta);
 }
 
 /* Alertas */

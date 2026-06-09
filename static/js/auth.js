@@ -1,51 +1,82 @@
+let popup = document.querySelector('#popup');
+let pHea = document.querySelector('#popup h2');
+let msg = document.querySelector('#popup h3');
 let rutI = document.querySelector('#rut');
 let	rut = rutI.value;
 let passW = document.querySelector('#password');
 let cofPs = document.querySelector('#confirm_password');
-let btn = document.querySelector('#btn-primary');
+let btn = document.querySelector('.btn-primary');
 let cargo = document.querySelector('#cargo');
 let curso = document.querySelector('.form-group.curso');
+let cursoSel = document.querySelector('.form-group.curso #curso');
+let noJefatura = document.querySelector('#noCur');
+
+function popupShow(header, p, time){
+	pHea.innerHTML = `<span class="material-symbols-outlined">person_alert</span>  ${header}`;
+	msg.innerHTML = `${p}`;
+	popup.showModal();
+	setTimeout(() => {
+		popup.close();
+	}, time);
+}
 
 curso.style.display = 'none';
 
 function verRut(){
-	dvrut = rut.charAt(-1)
-	contador = 2;
-	x = len(rut) - 1;
-	lista = [];
-	for( i in rut){
-		lista.append(int(i))}
-	suma = 0;
-	while(x >= 0){
-		suma = suma + (lista[x] * contador);
-		x -= 1;
-		contador += 1;
-		if(contador > 7){
-				contador = 2
+	console.log(rut);
+	
+	// Limpiar el RUT: eliminar puntos y guión
+	let rutLimpio = rut.replace(/\./g, '').replace(/-/g, '');
+	
+	// Separar el cuerpo del dígito verificador
+	let cuerpo = rutLimpio.slice(0, -1);
+	let dvIngresado = rutLimpio.slice(-1);
+	
+	// Invertir el cuerpo para calcular desde la derecha
+	let contador = 2;
+	let suma = 0;
+	
+	// Calcular usando los dígitos del cuerpo (sin el DV)
+	for(let i = cuerpo.length - 1; i >= 0; i--){
+			let digito = parseInt(cuerpo[i]);
+			suma += digito * contador;
+			contador++;
+			if(contador > 7){
+					contador = 2;
 			}
 	}
-	resto = suma % 11;
-	dv = 11 - resto;
-	if(dv == 11){
-		dv = 0}
-	if(dv == 10){
-		digito = "K"}
-	else {
-		digito = str(dv)
-	}
-	if (digito == dvrut){
-		alert("Rut verificado");
-		return;
+	
+	let resto = suma % 11;
+	let dvCalculado = 11 - resto;
+	
+	let digito;
+	if(dvCalculado == 11){
+			digito = '0';
+	} else if(dvCalculado == 10){
+			digito = 'K';
 	} else {
-		alert("Error: rut usuario no identificado");
-		return;
+			digito = dvCalculado.toString();
+	}
+	
+	// Comparar ignorando mayúsculas/minúsculas
+	if(digito.toUpperCase() === dvIngresado.toUpperCase()){
+			popupShow('¡Éxito!', 'Rut válido.', 1000);
+			return true;
+	} else {
+			popupShow('Aviso', 'Rut no existente.', 1000);
+			return false;
 	}
 	console.log(digito);
 }
-
 cargo.addEventListener('change', () => {
 	if(cargo.value === 'estudiante' || cargo.value === 'profesor'){
 		curso.style.display = 'inline-block';
+		curso.required = true;
+		if(cargo.value === "profesor"){
+			noJefatura.style.display = 'inline-block';
+		} else {
+			noJefatura.style.display = 'none'
+		}
 	} else {
 	curso.style.display = 'none';
 	}
@@ -53,21 +84,24 @@ cargo.addEventListener('change', () => {
 
 rutI.addEventListener('change', () => {
 	if (rutI.value.length < 10 && rutI.value.length > 13){
-		return
+		rut = rutI.value;
 	} else {
 		if(rutI.value.length === 9){
 			rut = rutI.value.slice(0, 2) + '.' + rutI.value.slice(2, 5) + '.' +rutI.value.slice(5, -1) + '-' + rutI.value.slice(-1);
+			rutI.value = rut;
 		} else if(rutI.value.length == 8){
 			rut = rutI.value.slice(0, 1) + '.' + rutI.value.slice(1, 4) + '.' +rutI.value.slice(4, -1) + '-' + rutI.value.slice(-1);
+			rutI.value = rut;
 		}
 	}
-	rutI.value = rut;
+	rut = rutI.value;
+	console.log(rut + ' | ' + rutI.value);
+	verRut();
 });
 
 btn.addEventListener('click', () => {
-	if(passW.value =! cofPs.value){
-		alert('Las contraseñas no encajan');
-		return;
+	console.log(passW.value + ' | ' + cofPs.value);
+	if(passW.value !== cofPs.value){
+		popupShow('¡Alerta!', 'Las contraseñas no encajan.', 1000);
 	};
-	verRut();
 })
