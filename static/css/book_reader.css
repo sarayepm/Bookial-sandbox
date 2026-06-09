@@ -1,0 +1,79 @@
+.reader-container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    min-height: 60vh;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.reader-header {
+    border-bottom: 2px solid var(--mainorange);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.reader-controls {
+    position: sticky;
+    top: 0;
+    background: var(--lightorange);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    z-index: 10;
+}
+
+.book-content {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: justify;
+    padding: 20px;
+    background: #fafafa;
+    border-radius: 10px;
+    min-height: 500px;
+}
+
+.btn-reader {
+    padding: 8px 20px;
+    background: var(--mainpink);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-reader:hover {
+    background: var(--strongorange);
+    transform: scale(1.05);
+}
+
+.progress-saved {
+    position: fixed;
+    bottom: 20px;
+    right: 260px;
+    background: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: none;
+    z-index: 100;
+}
+
+@media (max-width: 768px) {
+    .progress-saved {
+        right: 200px;
+    }
+}
+
+.page-info {
+    background: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}

@@ -17,6 +17,16 @@ header {
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
+.header-div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-p {
+    font-size: larger;
+}
+
 nav {
     background: var(--paleorange);
     padding: 20px;
