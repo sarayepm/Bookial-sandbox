@@ -11,11 +11,11 @@
 </head>
 <body>
 	<header>
-		<div class="header-div">
+				<a href="dashboard.html" class="header-div">
 			<i class="bi bi-book-half" style="font-size: 48px;"></i>
 			<h1>Bookial</h1>
 			<p class="header-p">Biblioteca Digital</p>
-		</div>
+		</a>
 	</header>
 
 	<nav>
@@ -50,23 +50,34 @@
 						<label for="email"><i class="bi bi-envelope"></i> Email:</label>
 						<input type="email" id="email" name="email" required placeholder="tu@email.com">
 					</div>
+
+					<div class="form-group">
+						<label for="cargo"> Cargo:</label>
+						<select name="cargo" id="cargo">
+							<option value="default">Selecciona tu cargo</option>
+							<option value="director">Director</option>
+							<option value="profesor">Profesor</option>
+							<option value="apoderado">Apoderado</option>
+							<option value="estudiante">Estudiante</option>
+						</select>
+					</div>
 					
 					<div class="form-group">
 						<label for="curso"><i class="bi bi-mortarboard"></i> Curso:</label>
 						<select id="curso" name="curso">
-							<option value="">Selecciona tu curso</option>
-							<option>1° Básico</option>
-							<option>2° Básico</option>
-							<option>3° Básico</option>
-							<option>4° Básico</option>
-							<option>5° Básico</option>
-							<option>6° Básico</option>
-							<option>7° Básico</option>
-							<option>8° Básico</option>
-							<option>1° Medio</option>
-							<option>2° Medio</option>
-							<option>3° Medio</option>
-							<option>4° Medio</option>
+							<option value="default">Selecciona tu curso</option>
+							<option value="1ro básico">1° Básico</option>
+							<option value="2do básico">2° Básico</option>
+							<option value="3ro básico">3° Básico</option>
+							<option value="4to básico">4° Básico</option>
+							<option value="5to básico">5° Básico</option>
+							<option value="6to básico">6° Básico</option>
+							<option value="7mo básico">7° Básico</option>
+							<option value="8vo básico">8° Básico</option>
+							<option value="1ro básico">1° Medio</option>
+							<option value="2do básico">2° Medio</option>
+							<option value="3ro básico">3° Medio</option>
+							<option value="4to básico">4° Medio</option>
 						</select>
 					</div>
 					
@@ -94,5 +105,7 @@
 		<small>Contacto: bookial@protonmail.com</small>
 	</footer>
 	<script src="js/nav.js"></script>
+	<script src="../static/js/register.js"></script>
+	<script src="../static/js/auth.js"></script>
 </body>
 </html>

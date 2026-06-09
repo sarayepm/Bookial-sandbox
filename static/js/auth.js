@@ -1,0 +1,1 @@
+let rut = document.querySelector('#rut');

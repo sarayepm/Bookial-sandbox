@@ -24,7 +24,7 @@ header {
 }
 
 .header-p {
-    font-size: larger;
+    font-size: 10px;
 }
 
 nav {
@@ -69,16 +69,15 @@ footer {
 }
 
 @media (max-width: 768px) {
-        nav 
-     {
-    width: 180px;
-}
+    nav {
+        width: 180px;
+    }
+
     main, footer {
         margin-right: 200px;
-        
- }
+    }
+
     .books-grid {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        
- }
+    }
 }
