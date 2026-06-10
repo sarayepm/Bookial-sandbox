@@ -15,4 +15,4 @@ function confirmAction(message, url) {
 		window.location.href = url;
 	}
 	return false;
-}
+};

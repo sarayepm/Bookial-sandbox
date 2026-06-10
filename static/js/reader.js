@@ -7,13 +7,13 @@ class BookReader {
 		this.totalPages = 0;
 		this.zoom = 1.0;
 		this.init();
-	}
+	};
 	
 	init() {
 		this.loadPDF();
 		this.setupEventListeners();
 		this.loadProgress();
-	}
+	};
 	
 	loadPDF() {
 		const loadingTask = pdfjsLib.getDocument(this.pdfUrl);
@@ -25,7 +25,7 @@ class BookReader {
 			console.error('Error loading PDF:', error);
 			this.showError('No se pudo cargar el libro');
 		});
-	}
+	};
 	
 	renderPage(pageNum, pdf) {
 		pdf.getPage(pageNum).then((page) => {
@@ -45,35 +45,35 @@ class BookReader {
 			this.updatePageInfo();
 			this.saveProgress(pageNum);
 		});
-	}
+	};
 	
 	nextPage() {
 		if (this.currentPage < this.totalPages) {
 			this.currentPage++;
 			this.loadPDF();
-		}
-	}
+		};
+	};
 	
 	prevPage() {
 		if (this.currentPage > 1) {
 			this.currentPage--;
 			this.loadPDF();
-		}
-	}
+		};
+	};
 	
 	zoomIn() {
 		if (this.zoom < 2.0) {
 			this.zoom += 0.25;
 			this.loadPDF();
-		}
-	}
+		};
+	};
 	
 	zoomOut() {
 		if (this.zoom > 0.5) {
 			this.zoom -= 0.25;
 			this.loadPDF();
-		}
-	}
+		};
+	};
 	
 	saveProgress(pageNum) {
 		localStorage.setItem(`book_${this.bookId}_progress`, pageNum);
@@ -85,25 +85,25 @@ class BookReader {
 			},
 			body: JSON.stringify({ page: pageNum })
 		});
-	}
+	};
 	
 	loadProgress() {
 		const savedPage = localStorage.getItem(`book_${this.bookId}_progress`);
 		if (savedPage) {
 			this.currentPage = parseInt(savedPage);
 		}
-	}
+	};
 	
 	updatePageInfo() {
 		document.getElementById('current-page').textContent = this.currentPage;
-	}
+	};
 	
 	showError(message) {
 		const errorDiv = document.createElement('div');
 		errorDiv.className = 'alert alert-danger';
 		errorDiv.textContent = message;
 		document.querySelector('main').prepend(errorDiv);
-	}
+	};
 	
 	setupEventListeners() {
 		document.getElementById('next-page')?.addEventListener('click', () => this.nextPage());
@@ -117,7 +117,7 @@ class BookReader {
 			if (e.key === 'ArrowLeft') this.prevPage();
 		});
 	}
-}
+};
 
 // Inicializar cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', () => {

@@ -18,25 +18,18 @@ function popupShow(header, p, time){
 	setTimeout(() => {
 		popup.close();
 	}, time);
-}
+};
 
 curso.style.display = 'none';
 
 function verRut(){
 	console.log(rut);
 	
-	// Limpiar el RUT: eliminar puntos y guión
 	let rutLimpio = rut.replace(/\./g, '').replace(/-/g, '');
-	
-	// Separar el cuerpo del dígito verificador
 	let cuerpo = rutLimpio.slice(0, -1);
 	let dvIngresado = rutLimpio.slice(-1);
-	
-	// Invertir el cuerpo para calcular desde la derecha
 	let contador = 2;
 	let suma = 0;
-	
-	// Calcular usando los dígitos del cuerpo (sin el DV)
 	for(let i = cuerpo.length - 1; i >= 0; i--){
 			let digito = parseInt(cuerpo[i]);
 			suma += digito * contador;
@@ -45,10 +38,8 @@ function verRut(){
 					contador = 2;
 			}
 	}
-	
 	let resto = suma % 11;
 	let dvCalculado = 11 - resto;
-	
 	let digito;
 	if(dvCalculado == 11){
 			digito = '0';
@@ -57,8 +48,6 @@ function verRut(){
 	} else {
 			digito = dvCalculado.toString();
 	}
-	
-	// Comparar ignorando mayúsculas/minúsculas
 	if(digito.toUpperCase() === dvIngresado.toUpperCase()){
 			popupShow('¡Éxito!', 'Rut válido.', 1000);
 			return true;
@@ -67,7 +56,8 @@ function verRut(){
 			return false;
 	}
 	console.log(digito);
-}
+};
+
 cargo.addEventListener('change', () => {
 	if(cargo.value === 'estudiante' || cargo.value === 'profesor'){
 		curso.style.display = 'inline-block';
@@ -104,4 +94,4 @@ btn.addEventListener('click', () => {
 	if(passW.value !== cofPs.value){
 		popupShow('¡Alerta!', 'Las contraseñas no encajan.', 1000);
 	};
-})
+});
