@@ -2,25 +2,25 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/aesthetic.css">
-    <link rel="stylesheet" href="../static/css/structure.css">
-    <link rel="stylesheet" href="../static/css/home.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <title>Bookial - Gestión de Profesores</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../static/css/aesthetic.css">
+	<link rel="stylesheet" href="../static/css/structure.css">
+	<link rel="stylesheet" href="../static/css/home.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+	<title>Bookial - Gestión de Profesores</title>
 </head>
 
 <body>
-    <header>
-        <a href="dashboard.html" class="header-div">
-            <i class="bi bi-book-half" style="font-size: 48px;"></i>
-            <h1>Bookial</h1>
-            <p class="header-p">Biblioteca Digital</p>
-        </a>
-    </header>
+	<header>
+		<a href="dashboard.html" class="header-div">
+			<i class="bi bi-book-half" style="font-size: 48px;"></i>
+			<h1>Bookial</h1>
+			<p class="header-p">Biblioteca Digital</p>
+		</a>
+	</header>
 
-    <nav id="mainNav">
+	<nav id="mainNav">
 		<h3><i class="bi bi-menu-button-wide"></i> Menú</h3>
 		<a href="index.html"><i class="bi bi-house"></i> Inicio</a>
 		<a href="dashboard.html"><i class="bi bi-grid"></i> Dashboard</a>
@@ -35,53 +35,52 @@
 		<a href="login.html"><i class="bi bi-box-arrow-right"></i> Cerrar Sesión</a>
 	</nav>
 
-    <main>
-        <h1><i class="bi bi-person-badge"></i> Gestionar Profesores</h1>
-        <button id="btnNuevoProfesor" class="btn-primary">+ Nuevo Profesor</button>
+	<main>
+		<h1><i class="bi bi-person-badge"></i> Gestionar Profesores</h1>
+		<button id="btnNuevoProfesor" class="btn-primary">+ Nuevo Profesor</button>
 
-        <table id="tablaProfesores" style="width:100%; margin-top:20px; border-collapse: collapse;">
-            <thead style="background:#f0f0f0;">
-                <tr>
-                    <th>RUT</th>
-                    <th>Nombre Completo</th>
-                    <th>Email</th>
-                    <th>Asignaturas</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
-    </main>
+		<table id="tablaProfesores" style="width:100%; margin-top:20px; border-collapse: collapse;">
+			<thead style="background:#f0f0f0;">
+				<tr>
+					<th>RUT</th>
+					<th>Nombre Completo</th>
+					<th>Email</th>
+					<th>Asignaturas</th>
+					<th>Acciones</th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+	</main>
 
-    <div id="modalProfesor" class="modal">
-        <div class="modal-content">
-            <span class="btn-cerrar">&times;</span>
-            <h2 id="modalTitulo">Nuevo Profesor</h2>
-            <input type="hidden" id="profesorId">
-            <input type="text" id="rut" placeholder="RUT (12345678-5)">
-            <input type="text" id="nombre" placeholder="Nombre">
-            <input type="text" id="apellidoPaterno" placeholder="Apellido Paterno">
-            <input type="text" id="apellidoMaterno" placeholder="Apellido Materno">
-            <input type="email" id="email" placeholder="Email">
-    
-            <label>Asignaturas que imparte:</label>
-            <div id="asignaturasCheckbox"
-                style="border:1px solid #ddd; padding:8px; border-radius:5px; max-height:150px; overflow-y:auto;">
-                <!-- Los checkboxes se llenan dinámicamente con JS -->
-            </div>
-    
-            <button id="guardarProfesor" class="btn-primary">Guardar</button>
-        </div>
-    </div>
+	<div id="modalProfesor" class="modal">
+		<div class="modal-content">
+			<span class="btn-cerrar">&times;</span>
+			<h2 id="modalTitulo">Nuevo Profesor</h2>
+			<input type="hidden" id="profesorId">
+			<input type="text" id="rut" placeholder="RUT (12345678-5)">
+			<input type="text" id="nombre" placeholder="Nombre">
+			<input type="text" id="apellidoPaterno" placeholder="Apellido Paterno">
+			<input type="text" id="apellidoMaterno" placeholder="Apellido Materno">
+			<input type="email" id="email" placeholder="Email">
+	
+			<label>Asignaturas que imparte:</label>
+			<div id="asignaturasCheckbox"
+				class="asigCheckbox">
+			</div>
+	
+			<button id="guardarProfesor" class="btn-primary">Guardar</button>
+		</div>
+	</div>
 
-    <footer>
-        <p>&copy; 2026 Bookial - Todos los derechos reservados</p>
-        <small>Contacto: bookial@protonmail.com</small>
-    </footer>
+	<footer>
+		<p>&copy; 2026 Bookial - Todos los derechos reservados</p>
+		<small>Contacto: bookial@protonmail.com</small>
+	</footer>
 
-    <script src="../static/js/nav.js"></script>
-    <script src="../static/js/data.js"></script>
-    <script src="../static/js/profesores.js"></script>
+	<script src="../static/js/nav.js"></script>
+	<script src="../static/js/data.js"></script>
+	<script src="../static/js/profesores.js"></script>
 </body>
 
 </html>
