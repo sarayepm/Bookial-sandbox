@@ -49,3 +49,11 @@
     font-size: 12px;
     margin: 2px;
 }
+
+.asigCheckbox {
+    border: 1px solid #ddd;
+    padding: 8px;
+    border-radius: 5px;
+    max-width: 150px;
+    overflow-y: auto;
+}

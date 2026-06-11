@@ -68,12 +68,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const acciones = row.insertCell(4);
             const btnEditar = document.createElement("button");
-            btnEditar.textContent = "✏️";
+            btnEditar.textContent = "EDITAR";
             btnEditar.classList.add("btn-small");
             btnEditar.style.marginRight = "5px";
             btnEditar.onclick = () => editarProfesor(prof);
             const btnEliminar = document.createElement("button");
-            btnEliminar.textContent = "🗑️";
+            btnEliminar.textContent = "ELIMINAR";
             btnEliminar.classList.add("btn-small");
             btnEliminar.onclick = () => eliminarProfesor(prof.id);
             acciones.appendChild(btnEditar);
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Limpiar modal
+    
     function limpiarModal() {
         modalTitulo.textContent = "Nuevo Profesor";
         profesorIdInput.value = "";
