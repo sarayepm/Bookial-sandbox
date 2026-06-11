@@ -39,7 +39,7 @@
 			<div class="auth-box">
 				<h2><i class="bi bi-person-plus"></i> Registro de Usuario</h2>
 				
-				<form action="login.html" method="GET">
+				<form action="/form" method="POST">
 					<div class="form-group">
 						<label for="nombre"><i class="bi bi-person"></i> Nombre:</label>
 						<input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
@@ -64,10 +64,10 @@
 						<label for="cargo"><i class="bi bi-person-workspace"></i> Cargo:</label>
 						<select required name="cargo" id="cargo">
 							<option value="" disabled hidden selected>Selecciona tu cargo</option>
-							<option value="director">Director</option>
-							<option value="profesor">Profesor</option>
-							<option value="apoderado">Apoderado</option>
-							<option value="estudiante">Estudiante</option>
+							<option value="1">Director</option>
+							<option value="2">Profesor</option>
+							<option value="3">Apoderado</option>
+							<option value="4">Estudiante</option>
 						</select>
 					</div>
 					
