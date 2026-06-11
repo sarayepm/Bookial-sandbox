@@ -1,86 +1,120 @@
-:root {
-    --mainorange: #ffc179;
-	--strongorange: #ffa970;
-	--lightorange: #ffc090;
-	--paleorange: #ffd0b0;
-	--mainpink: #ff4590;
-	--lightpink: #ff80b5;
-	--palepink: #ffaacc;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.overlay-blur {
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f5f5;
+    display: flex;
+}
+
+/* Main content */
+main {
+    flex: 1;
+    padding: 30px;
+    background: white;
+}
+
+/* Popup */
+#difuminate {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.2); 
-    backdrop-filter: blur(8px);   
-    z-index: 999;                 
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 998;
 }
 
-.selector-curso {
+#popup-curso {
     position: fixed;
-    top: 20%;
-    left: 15%;
-    width: 70%;
-    height: 60%;
-    background-image: linear-gradient(var(--lightorange) 50%, var(--mainorange), var(--strongorange));
-    border-radius: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000; 
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-.selector-curso h1 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
     text-align: center;
-    font-size: 42px;
-    padding: 2px;
-    margin-bottom: 22px;
+    z-index: 999;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-select {
-    background-color: var(--lightorange);
-    border: solid black 2px;
-    border-radius: 8%;
-    padding: 8px 14px;
-    letter-spacing: 3px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    margin: 8px 0px;
-    color: black;
+#popup-curso select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
 }
 
-option {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 22px;
+#popup-curso button {
+    background: #ff4590;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
 }
 
-@media (min-width: 318px) and (max-width: 425px) {
+/* Contenido del leccionario (oculto inicialmente) */
+#contenidoLeccionario {
+    display: none;
+}
 
-    .selector-curso {
-        width: 54%;
-        height: 32%;
-        top: 25%;
-        left: 25%;
-    }
+.form-group {
+    margin-bottom: 15px;
+}
 
-    .selector-curso h1 {
-        display: inline-block;
-        font-size: 18px;
-    }
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
 
-    select {
-        font-size: 14px;
-    }
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
 
-    option {
-        font-size: 16px;
-    }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
 
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background: #f0f0f0;
+}
+
+.btn-primary {
+    background: #ff4590;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
 }

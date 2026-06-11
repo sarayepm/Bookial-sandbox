@@ -61,6 +61,7 @@ main {
 }
 
 footer {
+	margin-top: 30px;
 	background: #333;
 	color: white;
 	text-align: center;

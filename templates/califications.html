@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../static/css/aesthetic.css">
+	<link rel="stylesheet" href="../static/css/structure.css">
+	<link rel="stylesheet" href="../static/css/home.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+	<title>Bookial - Califications</title>
+</head>
+<body>
+    <header>
+		<a href="dashboard.html" class="header-div">
+			<i class="bi bi-book-half" style="font-size: 48px;"></i>
+			<h1>Bookial</h1>
+			<p class="header-p">Biblioteca Digital</p>
+		</a>
+	</header>
+
+    <nav id="mainNav">
+		<h3><i class="bi bi-menu-button-wide"></i> Menú</h3>
+		<a href="index.html"><i class="bi bi-house"></i> Inicio</a>
+		<a href="dashboard.html"><i class="bi bi-grid"></i> Dashboard</a>
+		<a href="library.html"><i class="bi bi-book"></i> Biblioteca</a>
+		<a href="calendar.html"><i class="bi bi-calendar"></i> Calendario</a>
+		<a href="alumnos.html"><i class="bi bi-calendar"></i> Alumnos</a>
+		<a href="profesores.html"><i class="bi bi-calendar"></i> Profesores</a>
+		<a href="califications.html"><i class="bi bi-calendar"></i> Califications</a>
+		<a href="gamification.html"><i class="bi bi-calendar"></i> Gamificacion</a>
+		<a href="lectionary.html"><i class="bi bi-calendar"></i> Leccionario</a>
+		<hr>
+		<a href="login.html"><i class="bi bi-box-arrow-right"></i> Cerrar Sesión</a>
+	</nav>
+
+    <main>
+        <h1>Gestión de Calificaciones</h1>
+        <div class="form-group">
+            <label>Curso:</label>
+            <select id="selCurso"></select>
+        </div>
+
+        <div class="form-group">
+            <label>Asignatura:</label>
+            <select id="selAsignatura"></select>
+        </div>
+
+        <div class="form-group">
+            <label>Evaluación:</label>
+            <select id="selEvaluacion"></select>
+        </div>
+
+        <button id="crearEvaluacion" class="btn-primary">Crear Evaluación</button>
+        <table id="tablaNotas" border="1">
+            <thead>
+                <tr>
+                    <th>Alumno</th>
+                    <th>Nota</th>
+                    <th>Pendiente</th>
+                    <th>Justificación</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <button id="guardarNotas" class="btn-primary">Guardar Calificaciones</button>
+    </main>
+
+    <footer>
+		<p>&copy; 2026 Bookial - Todos los derechos reservados</p>
+		<small>Contacto: bookial@protonmail.com</small>
+	</footer>
+
+	<script src="../static/js/nav.js"></script>
+    <script src="../static/js/califications.js"></script>
+    <script src="../static/js/data.js"></script>
+</body>
+</html>

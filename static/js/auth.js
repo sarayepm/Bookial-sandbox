@@ -95,3 +95,23 @@ btn.addEventListener('click', () => {
 		popupShow('¡Alerta!', 'Las contraseñas no encajan.', 1000);
 	};
 });
+
+const usuarios = [
+  { email: "admin@bookial.cl", password: "admin", rol: "admin", nombre: "Director" },
+  { email: "profesor@bookial.cl", password: "prof", rol: "profesor", nombre: "Roberto Fernández" },
+  { email: "apoderado@bookial.cl", password: "apoderado", rol: "apoderado", nombre: "María López" },
+  { email: "alumno@bookial.cl", password: "alumno", rol: "alumno", nombre: "Carlos Alumno" }
+];
+
+document.getElementById("loginForm")?.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const email = document.getElementById("email").value;
+  const pwd = document.getElementById("password").value;
+  const user = usuarios.find(u => u.email === email && u.password === pwd);
+  if (user) {
+    localStorage.setItem("user", JSON.stringify({ email: user.email, rol: user.rol, nombre: user.nombre }));
+    window.location.href = "dashboard.html";
+  } else {
+    alert("Credenciales inválidas");
+  }
+});
