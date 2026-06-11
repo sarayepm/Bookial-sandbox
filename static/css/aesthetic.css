@@ -87,6 +87,17 @@ input::placeholder, select {
 	color: var(--bookialpink);
 }
 
+table {
+	margin: 10px 0;
+	border-collapse: collapse;
+	border: 3px solid var(--bookialpink);
+}
+
+table tr th, td {
+	border-collapse: collapse;
+	border: 2px solid var(--bookialpink);
+	padding: 2.5px;
+}
 
 .auth-link a {
 	color: var(--bookialpink);
