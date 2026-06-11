@@ -48,14 +48,15 @@ function verRut(){
 	} else {
 			digito = dvCalculado.toString();
 	}
-	if(digito.toUpperCase() === dvIngresado.toUpperCase()){
-			popupShow('¡Éxito!', 'Rut válido.', 1000);
-			return true;
-	} else {
-			popupShow('Aviso', 'Rut no existente.', 1000);
-			return false;
-	}
-	console.log(digito);
+	// Deshabilitado por el momento. Razones: Esteban
+	// if(digito.toUpperCase() === dvIngresado.toUpperCase()){
+	// 		popupShow('¡Éxito!', 'Rut válido.', 1000);
+	// 		return true;
+	// } else {
+	// 		popupShow('Aviso', 'Rut no existente.', 1000);
+	// 		return false;
+	// }
+	// console.log(digito);
 };
 
 cargo.addEventListener('change', () => {
