@@ -36,8 +36,8 @@
           { nombre: "Dashboard", link: "dashboard.html", icon: "bi-grid" },
           { nombre: "Alumnos", link: "alumnos.html", icon: "bi-people" },
           { nombre: "Profesores", link: "profesores.html", icon: "bi-person-badge" },
-          { nombre: "Leccionario", link: "leccionario.html", icon: "bi-journal-bookmark" },
-          { nombre: "Calificaciones", link: "calificaciones.html", icon: "bi-star" }
+          { nombre: "Leccionario", link: "lectionary.html", icon: "bi-journal-bookmark" },
+          { nombre: "Calificaciones", link: "califications.html", icon: "bi-star" }
         ]
       };
       const menu = rolesMenu[user.rol] || rolesMenu.admin;
