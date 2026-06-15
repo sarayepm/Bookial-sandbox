@@ -55,7 +55,6 @@ input, select {
 	border-radius: 10px;
 }
 
-
 .form-group {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -220,6 +219,10 @@ table tr th, td {
 	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 	gap: 20px;
 	margin-top: 20px;
+}
+
+.book-card .btn {
+	color: var(--bookialpink);
 }
 
 #popup {

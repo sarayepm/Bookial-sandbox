@@ -1,0 +1,98 @@
+:root {
+	--mainorange          : #ffc179;
+	--strongorange        : #ffa970;
+	--lightorange         : #ffc090;
+	--paleorange          : #ffd0b0;
+	--mainpink            : #ff4590;
+	--lightpink           : #ff80b5;
+	--palepink            : #ffaacc;
+
+	--bookialwhite        : #fafafa;
+	--bookialyellow       : #fffba4;
+	--bookialorange       : #f9c080;
+	--bookialpeach        : #ffcdc5;
+	--bookialsalmon       : #ed7878;
+	--bookialred          : #eb4949;
+	--bookialcoral        : #ff768f;
+	--bookialpink         : #dd3e77;
+	--bookialfucsia       : #eb5fb3;
+	--bookiallavander     : #ef9ce7;
+	--bookialmagenta      : #c364d6;
+	--bookialdarkpink     : #420c60;
+	--bookialpurple       : #3d2aaf;
+	--bookialblue         : #3c7cd1;
+	--bookiallightcyan    : #bde1ed;
+	--bookialdarkturqoise : #116274;
+	--bookialblack        : #222222;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: linear-gradient(135deg, var(--bookialblack), #151515);
+}
+
+header {
+	background: linear-gradient(135deg, var(--bookialdarkpink), var(--bookialpurple));
+}
+
+header a {
+	color: #000000 !important;
+}
+
+nav {
+	background: var(--bookialpurple);
+}
+
+nav hr {
+	border-color: var(--bookiallightcyan);
+}
+
+nav h3 {
+	color: var(--bookiallightcyan);
+}
+
+nav a {
+	color: var(--bookiallightcyan);
+	opacity: 50%;
+}
+
+nav a:hover {
+	background: var(--bookialdarkpink);
+	color: var(--bookialfucsia);
+	opacity: 100%;
+}
+
+#intro, #featured-books h2 {
+	color: var(--bookialblue);
+}
+
+#stats div {
+	background-color: #000000;
+	color: var(--bookialblue)
+}
+
+#stats div i {
+	color: var(--bookialdarkturqoise);
+}
+
+#featured-books .book-card {
+	background-color: #000000;
+	color: var(--bookialblue)
+}
+
+.book-card .book-icon i {
+	color: var(--bookialdarkturqoise);
+}
+
+.book-card .btn {
+	color: var(--bookialmagenta);
+}
+
+footer {
+	background-color: #000000;
+}
