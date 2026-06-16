@@ -1,12 +1,5 @@
 :root {
-	--mainorange          : #ffc179;
-	--strongorange        : #ffa970;
-	--lightorange         : #ffc090;
-	--paleorange          : #ffd0b0;
-	--mainpink            : #ff4590;
-	--lightpink           : #ff80b5;
-	--palepink            : #ffaacc;
-
+	/* BOOKIAL OFFICIAL COLORS */
 	--bookialwhite        : #fafafa;
 	--bookialyellow       : #fffba4;
 	--bookialorange       : #f9c080;
@@ -18,12 +11,29 @@
 	--bookialfucsia       : #eb5fb3;
 	--bookiallavander     : #ef9ce7;
 	--bookialmagenta      : #c364d6;
-	--bookialdarkpink     : #420c60;
+	--bookialdarkviolet   : #420c60;
 	--bookialpurple       : #3d2aaf;
 	--bookialblue         : #3c7cd1;
 	--bookiallightcyan    : #bde1ed;
 	--bookialdarkturqoise : #116274;
 	--bookialblack        : #222222;
+
+	/* BOOKAL ALTERNATIVE COLORS */
+	--mainorange          : #ffc179;
+	--strongorange        : #ffa970;
+	--lightorange         : #ffc090;
+	--paleorange          : #ffd0b0;
+	
+	--mainpink            : #ff4590;
+	--lightpink           : #ff80b5;
+	--palepink            : #ffaacc;
+
+	--bookialdarkpurple   : #431c8a;
+	--bookialgraypurple   : #281061;
+	--bookialweaknight    : #7f83c0;
+	--bookiallilac        : #d7bbee;
+	
+	--black               : #151515;
 }
 
 * {
@@ -34,7 +44,7 @@
 
 body {
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+	background: linear-gradient(135deg, var(--bookialwhite), #efefef);
 	min-height: 100vh;
 }
 

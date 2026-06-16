@@ -1,12 +1,5 @@
 :root {
-	--mainorange          : #ffc179;
-	--strongorange        : #ffa970;
-	--lightorange         : #ffc090;
-	--paleorange          : #ffd0b0;
-	--mainpink            : #ff4590;
-	--lightpink           : #ff80b5;
-	--palepink            : #ffaacc;
-
+	/* BOOKIAL OFFICIAL COLORS */
 	--bookialwhite        : #fafafa;
 	--bookialyellow       : #fffba4;
 	--bookialorange       : #f9c080;
@@ -18,30 +11,41 @@
 	--bookialfucsia       : #eb5fb3;
 	--bookiallavander     : #ef9ce7;
 	--bookialmagenta      : #c364d6;
-	--bookialdarkpink     : #420c60;
+	--bookialdarkviolet   : #420c60;
 	--bookialpurple       : #3d2aaf;
 	--bookialblue         : #3c7cd1;
 	--bookiallightcyan    : #bde1ed;
 	--bookialdarkturqoise : #116274;
 	--bookialblack        : #222222;
-}
 
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+	/* BOOKAL ALTERNATIVE COLORS */
+	--paleorange          : #ffd0b0;
+	--mainorange          : #ffc179;
+	--lightorange         : #ffc090;
+	--strongorange        : #ffa970;
+
+	--palepink            : #ffaacc;
+	--lightpink           : #ff80b5;
+	--mainpink            : #ff4590;
+
+	--bookiallilac        : #d7bbee;
+	--bookialweaknight    : #7f83c0;
+	--bookialdarkpurple   : #431c8a;
+	--bookialgraypurple   : #281061;
+	
+	--black               : #151515;
 }
 
 body {
-	background: linear-gradient(135deg, var(--bookialblack), #151515);
+	background: linear-gradient(135deg, var(--bookialblack), var(--black));
 }
 
 header {
-	background: linear-gradient(135deg, var(--bookialdarkpink), var(--bookialpurple));
+	background: linear-gradient(135deg, var(--bookialpurple), var(--bookialdarkviolet));
 }
 
 header a {
-	color: #000000 !important;
+	color: var(--bookiallilac);
 }
 
 nav {
@@ -49,50 +53,49 @@ nav {
 }
 
 nav hr {
-	border-color: var(--bookiallightcyan);
+	border-color: var(--bookiallilac);
 }
 
 nav h3 {
-	color: var(--bookiallightcyan);
+	color: var(--bookiallilac);
 }
 
 nav a {
-	color: var(--bookiallightcyan);
-	opacity: 50%;
+	color: var(--bookiallilac);
 }
 
 nav a:hover {
-	background: var(--bookialdarkpink);
-	color: var(--bookialfucsia);
-	opacity: 100%;
+	background: var(--bookialgraypurple);
+	color: var(--bookiallavander);
 }
 
 #intro, #featured-books h2 {
-	color: var(--bookialblue);
+	color: var(--bookialweaknight);
 }
 
 #stats div {
-	background-color: #000000;
-	color: var(--bookialblue)
+	background-color: var(--black);
+	color: var(--bookialweaknight)
 }
 
 #stats div i {
-	color: var(--bookialdarkturqoise);
-}
-
-#featured-books .book-card {
-	background-color: #000000;
-	color: var(--bookialblue)
-}
-
-.book-card .book-icon i {
-	color: var(--bookialdarkturqoise);
-}
-
-.book-card .btn {
 	color: var(--bookialmagenta);
 }
 
+#featured-books .book-card {
+	background-color: var(--black);
+	color: var(--bookialweaknight)
+}
+
+.book-card .book-icon i {
+	color: var(--bookialmagenta);
+}
+
+.book-card .btn {
+	color: var(--bookiallavander);
+}
+
 footer {
-	background-color: #000000;
+	background-color: var(--bookialblack);
+	color: var(--bookialweaknight);
 }
