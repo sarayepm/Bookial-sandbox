@@ -53,7 +53,7 @@ label {
 	grid-area: lab;
 }
 
-input, select {
+input, select{
 	grid-area: inp;
 }
 
@@ -67,6 +67,12 @@ input, select {
 }
 
 .form-group {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 'lab inp';
+}
+
+.form-group .curso {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-areas: 'lab inp';

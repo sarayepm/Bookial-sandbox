@@ -5,7 +5,7 @@ app.secret_key = "qwerasdfzxcv"
 
 @app.route('/')
 def root():
-	return render_template('register.html', title="Root")
+	return render_template('public/register.html', title="Root")
 
 @app.route('/form', methods=['POST'])
 def form():
@@ -25,7 +25,7 @@ def form():
 
 @app.route('/login')
 def exito():
-	return render_template('login.html')
+	return render_template('public/login.html')
 
 
 
