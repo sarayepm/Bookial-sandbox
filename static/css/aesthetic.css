@@ -33,6 +33,7 @@
 	--bookialweaknight    : #7f83c0;
 	--bookiallilac        : #d7bbee;
 	
+	--gray                : #afafaf;
 	--black               : #151515;
 }
 
@@ -44,7 +45,7 @@
 
 body {
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	background: linear-gradient(135deg, var(--bookialwhite), #efefef);
+	background: linear-gradient(135deg, var(--bookialwhite), var(--gray));
 	min-height: 100vh;
 }
 
