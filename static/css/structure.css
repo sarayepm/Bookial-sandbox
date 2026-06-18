@@ -29,11 +29,11 @@ header {
 
 nav {
 	background: var(--paleorange);
-	padding: 20px;
+	padding: 18px;
 	position: fixed;
 	right: 0;
 	top: 0;
-	width: 220px;
+	width: 216px;
 	height: 100vh;
 	box-shadow: -2px 0 10px rgba(0,0,0,0.1);
 	overflow-y: auto;

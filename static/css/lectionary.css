@@ -10,14 +10,12 @@ body {
 	display: flex;
 }
 
-/* Main content */
 main {
 	flex: 1;
 	padding: 30px;
 	background: white;
 }
 
-/* Popup */
 #difuminate {
 	position: fixed;
 	top: 0;
@@ -61,7 +59,6 @@ main {
 	margin-top: 10px;
 }
 
-/* Contenido del leccionario (oculto inicialmente) */
 #contenidoLeccionario {
 	display: none;
 }
@@ -76,9 +73,7 @@ label {
 	margin-bottom: 5px;
 }
 
-input,
-select,
-textarea {
+input, select, textarea {
 	width: 100%;
 	padding: 8px;
 	border-radius: 5px;
@@ -91,8 +86,7 @@ table {
 	margin-top: 20px;
 }
 
-th,
-td {
+th, td {
 	border: 1px solid #ddd;
 	padding: 8px;
 	text-align: left;
