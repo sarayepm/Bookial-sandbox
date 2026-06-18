@@ -128,6 +128,10 @@ table tr th, td {
 	color: var(--bookialmagenta);
 }
 
+.btn-small {
+	color: var(--bookialpink);
+}
+
 /* Alertas */
 .alert {
 	padding: 12px 20px;

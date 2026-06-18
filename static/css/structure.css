@@ -75,7 +75,11 @@ footer {
 	}
 
 	main, footer {
-		margin-right: 200px;
+		margin-right: 180px;
+	}
+
+	h1, h1 .bi-calendar {
+		font-size: 28px;
 	}
 
 	.books-grid {
